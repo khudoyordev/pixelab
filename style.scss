@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$mainOrange: #ff6600;
+$mainBlack: #0b1b35;
+$mainWhite: #fff;
+$titleColor: #0b1b35;
+
+$cardTextWeight: 400;
+$cardFontText: 500;
+$navFontItemWeight: 700;
+$mainFontTitleWeight: 850;
+
+
+$navFontItem: 18px;
+$cardTitleFont: 36px;
+$titleFontSize: 52px;
+$mainFontTitle: 70px;
+
+
+$regWidth: 119px;
+$regHeight: 49px;
+
+
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 135px 0 135px;
+    width: 100%;
+    height: 15vh;
+
+    .nav-items {
+      display: flex;
+      align-items: center;
+      gap: 114px;
+
+      .logo {
+        width: 240px;
+        height: 49px;
+      }
+
+      .nav-item {
+        display: flex;
+        gap: 35px;
+        .item {
+          text-decoration: none;
+          color: #333;
+          font-size: $navFontItem;
+          width: 80px;
+          font-weight: $cardTextWeight;
+        }
+        .item:hover {
+          font-weight: $navFontItemWeight;
+        }
+      }
+    }
+    .reg-part {
+      .btn {
+        font-size: $navFontItem;
+        font-weight: $cardFontText;
+        border: none;
+        background-color: $mainOrange;
+        width: $regWidth;
+        height: $regHeight;
+        border-radius: 10px;
+        color: $mainWhite;
+        cursor: pointer;
+
+        &:nth-child(1) {
+          background-color: transparent;
+          color: $mainBlack;
+        }
+      }
+    }
+  }
+
+  .main {
+    height: calc(100vh - 15vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 135px;
+    .main-content {
+      width: 653px;
+      .title {
+        font-size: $mainFontTitle;
+        color: $titleColor;
+        width: 85%;
+        font-weight: $mainFontTitleWeight;
+      }
+      .text {
+        margin: 16px 0 50px 0;
+        width: 65%;
+        font-size: $navFontItem;
+      }
+      .button {
+        width: 162px;
+        height: 49px;
+        text-decoration: none;
+        color: $mainWhite;
+        background-color: $mainOrange;
+        border-radius: 10px;
+        border: none;
+        font-size: $navFontItem;
+        font-weight: $cardFontText;
+        cursor: pointer;
+      }
+    }
+    .content-img {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .section-card {
+    height: 100vh;
+    .title {
+      font-size: $titleFontSize;
+      color: $titleColor;
+      font-weight: $navFontItemWeight;
+      text-align: center;
+    }
+    .card-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-rows: repeat(1, 502px);
+      padding: 0 73px;
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 25px auto;
+        gap: 40px;
+        text-align: center;
+        width: 352px;
+        height: 502px;
+        border-radius: 10px;
+        box-shadow: 0px 14px 24px 4px rgba(34, 60, 80, 0.2);
+        .box-icon {
+          width: 76px;
+          height: 76px;
+          margin: 0 auto;
+        }
+        .box-title {
+          font-size: 36px;
+          font-weight: $navFontItemWeight;
+        }
+        .box-text {
+          font-size: $navFontItem;
+          font-weight: $cardTextWeight;
+          line-height: 28.5px;
+        }
+        .box-btn {
+          width: $regWidth;
+          height: $regHeight;
+          border: none;
+          background-color: $mainOrange;
+          border-radius: 10px;
+          margin: 0 auto;
+          font-size:$navFontItem;
+          font-weight: $cardFontText;
+          color: $mainWhite;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .section-team {
+    height: 70vh;
+    .team-titles {
+      text-align: center;
+      .title {
+        font-size: 22px;
+        font-weight: 500;
+        color: $titleColor;
+      }
+      .title:nth-child(1) {
+        color: #8a898e;
+        font-size: 14px;
+      }
+    }
+
+    .team-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+      grid-template-rows: repeat(1, 370px);
+      align-items: center;
+padding: 0 105px;
+      .cards {
+        border: 1px solid #ebeaed;
+        width: 370px;
+        height: 370px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 10px auto;
+        border-radius: 10px;
+        .card-bio {
+          .img {
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            margin: 0 auto;
+          }
+          .name {
+            color: #1e0e62;
+            font-size: 22px;
+            font-weight: 500;
+            margin: 29px 0 5px 0;
+          }
+
+          .job {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(21, 20, 57, 0.4);
+          }
+        }
+        .social {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 1px solid #ebeaed;
+          height: 61px;
+          width: 100%;
+          .img {
+            width: 123px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            .icon {
+              width: 19px;
+              height: 19px;
+            }
+          }
+          .img:nth-child(2) {
+            border-left: 1px solid #ebeaed;
+            border-right: 1px solid #ebeaed;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 135px;
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 40%;
+
+      .footer-logo {
+        width: 111px;
+        height: 23px;
+      }
+      .footer-text {
+        font-size: 16px;
+        font-weight: $cardTextWeight;
+        color: #1e0e62;
+      }
+    }
+
+    .menu{
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      .footer-item{
+        list-style: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: #1e0e62;
+      }
+    }
+  }
+
+  .container-text{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(21, 20, 57, 0.4);
+    padding: 15px 135px;
+  }
+
+}
